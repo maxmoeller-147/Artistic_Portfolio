@@ -1,0 +1,56 @@
+/*CONTACT SECTION*/
+
+.contact {
+  padding: 4rem 0;
+}
+
+.contact-text {
+  max-width: 700px;
+  color: var(--color-muted);
+  margin-bottom: var(--space-lg);
+}
+
+.contact-details {
+  display: grid;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-lg);
+}
+
+.contact-item {
+  color: var(--color-text);
+}
+
+.contact-label {
+  font-weight: 600;
+  margin-right: 0.35rem;
+}
+
+.contact-link {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+}
+
+.contact-actions {
+  margin-bottom: var(--space-lg);
+}
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  list-style: none;
+}
+
+.social-link {
+  color: var(--color-text);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.social-link:hover {
+  color: var(--color-primary);
+}

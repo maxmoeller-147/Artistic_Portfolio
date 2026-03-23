@@ -21,3 +21,15 @@ export type Project = {
   liveUrl: string;
   repoUrl: string;
 };
+
+export type SkillCategory = {
+  title: string;
+  items: string[];
+};
+
+export type ExperienceItem = {
+  role: string;
+  company: string;
+  period: string;
+  description: string;
+};

@@ -1,0 +1,39 @@
+/*SKILLS SECTION*/
+
+.skills {
+  padding: 4rem 0;
+}
+
+.skills-grid {
+  display: grid;
+  gap: var(--space-lg);
+  grid-template-columns: 1fr;
+}
+
+.skills-card {
+  border: 1px solid #dbe4f0;
+  border-radius: 16px;
+  padding: var(--space-lg);
+  background-color: #ffffff;
+}
+
+.skills-card-title {
+  font-size: 1.1rem;
+  margin-bottom: var(--space-md);
+  color: var(--color-text);
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+}
+
+.skills-tag {
+  border: 1px solid #cbd5e1;
+  border-radius: 999px;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.9rem;
+  color: var(--color-text);
+}

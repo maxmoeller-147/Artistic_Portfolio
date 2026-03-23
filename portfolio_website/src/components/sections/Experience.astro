@@ -1,0 +1,28 @@
+---
+import type { ExperienceItem } from "../../types/content";
+import SectionHeading from "../ui/SectionHeading.astro";
+
+type Props = {
+  experienceItems: ExperienceItem[];
+};
+
+const { experienceItems } = Astro.props;
+---
+
+<section id="experience" class="experience">
+  <SectionHeading
+    label="Experience"
+    title="What I've been working on"
+  />
+
+  <div class="experience-list">
+    {experienceItems.map((item) => (
+      <article class="experience-card">
+        <p class="experience-period">{item.period}</p>
+        <h3 class="experience-role">{item.role}</h3>
+        <p class="experience-company">{item.company}</p>
+        <p class="experience-description">{item.description}</p>
+      </article>
+    ))}
+  </div>
+</section>

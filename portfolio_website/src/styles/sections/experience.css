@@ -1,0 +1,38 @@
+/*EXPERIENCE SECTION*/
+
+.experience {
+  padding: 4rem 0;
+}
+
+.experience-list {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+.experience-card {
+  border-left: 3px solid var(--color-primary);
+  padding-left: var(--space-lg);
+}
+
+.experience-period {
+  color: var(--color-primary);
+  font-weight: 600;
+  margin-bottom: var(--space-sm);
+}
+
+.experience-role {
+  font-size: 1.2rem;
+  margin-bottom: 0.35rem;
+  color: var(--color-text);
+}
+
+.experience-company {
+  color: var(--color-text);
+  font-weight: 500;
+  margin-bottom: var(--space-sm);
+}
+
+.experience-description {
+  color: var(--color-muted);
+  max-width: 720px;
+}

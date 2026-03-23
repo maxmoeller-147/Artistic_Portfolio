@@ -1,0 +1,31 @@
+---
+import type { SkillCategory } from "../../types/content";
+import SectionHeading from "../ui/SectionHeading.astro";
+
+type Props = {
+  skillCategories: SkillCategory[];
+};
+
+const { skillCategories } = Astro.props;
+---
+
+<section id="skills" class="skills">
+  <SectionHeading
+    label="Skills"
+    title="Tools and technologies I use"
+  />
+
+  <div class="skills-grid">
+    {skillCategories.map((category) => (
+      <article class="skills-card">
+        <h3 class="skills-card-title">{category.title}</h3>
+
+        <ul class="skills-list">
+          {category.items.map((item) => (
+            <li class="skills-tag">{item}</li>
+          ))}
+        </ul>
+      </article>
+    ))}
+  </div>
+</section>

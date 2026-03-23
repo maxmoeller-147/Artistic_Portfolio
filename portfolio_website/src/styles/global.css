@@ -5,6 +5,9 @@
 
 @import "./sections/hero.css";
 @import "./sections/about.css";
+@import "./sections/skills.css";
+@import "./sections/experience.css";
+@import "./sections/contact.css";
 
 @import "./shared/sharedsections.css";
 
@@ -14,8 +17,13 @@
   margin-bottom: var(--space-lg);
 }
 
+
 @media (min-width: 768px) {
   .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .skills-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }

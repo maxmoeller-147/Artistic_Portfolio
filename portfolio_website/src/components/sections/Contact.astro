@@ -1,0 +1,55 @@
+---
+import type { Profile } from "../../types/content";
+import SectionHeading from "../ui/SectionHeading.astro";
+import Button from "../ui/Button.astro";
+
+type Props = {
+  profile: Profile;
+};
+
+const { profile } = Astro.props;
+---
+
+<section id="contact" class="contact">
+  <SectionHeading
+    label="Contact"
+    title="Let's build something together"
+  />
+
+  <p class="contact-text">
+    I'm currently open to opportunities, collaborations, and new projects.
+    If you'd like to work together or just say hello, feel free to reach out.
+  </p>
+
+  <div class="contact-details">
+    <p class="contact-item">
+      <span class="contact-label">Email:</span>
+      <a href={`mailto:${profile.email}`} class="contact-link">
+        {profile.email}
+      </a>
+    </p>
+
+    <p class="contact-item">
+      <span class="contact-label">Location:</span>
+      {profile.location}
+    </p>
+  </div>
+
+  <div class="contact-actions">
+    <Button
+      href={`mailto:${profile.email}`}
+      label="Send Email"
+      variant="primary"
+    />
+  </div>
+
+  <ul class="social-links">
+    {profile.socials.map((social) => (
+      <li>
+        <a href={social.href} class="social-link" target="_blank" rel="noreferrer">
+          {social.label}
+        </a>
+      </li>
+    ))}
+  </ul>
+</section>

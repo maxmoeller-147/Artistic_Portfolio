@@ -4,9 +4,14 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Hero from "../components/sections/Hero.astro";
 import About from "../components/sections/About.astro";
 import Projects from "../components/sections/Projects.astro";
+import Skills from "../components/sections/Skills.astro";
+import Experience from "../components/sections/Experience.astro";
+import Contact from "../components/sections/Contact.astro";
 
 import { profile } from "../data/profile";
 import { projects } from "../data/projects";
+import { skillCategories } from "../data/skills"
+import { experienceItems } from "../data/experience";
 ---
 
 <MainLayout title="Home | Max Moeller">
@@ -14,5 +19,8 @@ import { projects } from "../data/projects";
     <Hero profile={profile} />
     <About profile={profile} />
     <Projects projects={projects} />
+    <Skills skillCategories={skillCategories} />
+    <Experience experienceItems={experienceItems} />
+    <Contact profile={profile} />
   </main>
 </MainLayout>
