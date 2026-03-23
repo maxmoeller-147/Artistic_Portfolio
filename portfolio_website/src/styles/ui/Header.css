@@ -1,0 +1,128 @@
+/*HEADER / NAVBAR*/
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(14px);
+  background: color-mix(in srgb, var(--color-bg) 82%, transparent);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.header-inner {
+  min-height: 4.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.brand-mark {
+  display: inline-grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.65rem;
+  background: var(--color-primary);
+  color: white;
+  font-size: 0.95rem;
+}
+
+.brand-text {
+  line-height: 1;
+}
+
+.desktop-nav {
+  display: none;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.5rem;
+  padding: 0 0.9rem;
+  border-radius: 999px;
+  color: var(--color-muted);
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.nav-link:hover {
+  background: var(--color-surface);
+  color: var(--color-text);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.icon-button {
+  display: inline-grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 999px;
+  text-decoration: none;
+  color: var(--color-muted);
+  border: 1px solid transparent;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.icon-button:hover {
+  background: var(--color-surface);
+  color: var(--color-text);
+  border-color: var(--color-border);
+}
+
+.icon {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+.contact-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 6.5rem;
+  height: 2.5rem;
+  padding: 0 1rem;
+  border-radius: 999px;
+  text-decoration: none;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  font-weight: 600;
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.contact-pill:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-1px);
+}

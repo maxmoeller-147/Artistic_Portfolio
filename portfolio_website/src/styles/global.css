@@ -12,6 +12,7 @@
 @import "./shared/sharedsections.css";
 
 @import "./ui/Button.css";
+@import "./ui/Header.css";
 
 .section-heading {
   margin-bottom: var(--space-lg);
@@ -26,4 +27,6 @@
   .skills-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+
 }
