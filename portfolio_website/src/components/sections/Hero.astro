@@ -1,0 +1,16 @@
+---
+import type { Profile } from "../../types/content";
+
+type Props = {
+  profile: Profile;
+};
+
+const { profile } = Astro.props;
+---
+
+<section>
+  <p class="hero-role">{profile.role}</p>
+  <h1 class="hero-title">{profile.name}</h1>
+  <p class="hero-tagline">{profile.tagline}</p>
+  <p class="hero-summary">{profile.summary}</p>
+</section>

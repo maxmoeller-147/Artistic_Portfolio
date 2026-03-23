@@ -1,0 +1,11 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Hero from "../components/sections/Hero.astro";
+import { profile } from "../data/profile";
+---
+
+<MainLayout title="Home | Max Moeller">
+  <main>
+    <Hero profile={profile} />
+  </main>
+</MainLayout>

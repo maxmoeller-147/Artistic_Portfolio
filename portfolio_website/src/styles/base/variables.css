@@ -1,0 +1,18 @@
+/*VARIABLES BASE (LIGHT)*/
+/*COLORS*/
+
+:root {
+  --color-bg: #f8fafc;
+  --color-text: #0f172a;
+  --color-muted: #475569;
+  --color-primary: #2563eb;
+
+  --max-width: 1100px;
+
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 48px;
+
+  --radius-md: 8px;
+}
