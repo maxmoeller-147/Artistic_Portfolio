@@ -1,5 +1,6 @@
 ---
 import type { Profile } from "../../types/content";
+import Button from "../ui/Button.astro";
 
 type Props = {
   profile: Profile;
@@ -13,4 +14,10 @@ const { profile } = Astro.props;
   <h1 class="hero-title">{profile.name}</h1>
   <p class="hero-tagline">{profile.tagline}</p>
   <p class="hero-summary">{profile.summary}</p>
+
+  <div class="hero-actions">
+    <Button href="#projects" label="My Projects" variant="primary" />
+    <Button href="#contact" label="Contact Me" variant="secondary" />
+  </div>
 </section>
+

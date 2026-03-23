@@ -1,0 +1,13 @@
+/*SHARED SECTION*/
+
+.section-label {
+  color: var(--color-primary);
+  font-weight: 600;
+  margin-bottom: var(--space-sm);
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: var(--space-md);
+  color: var(--color-text);
+}

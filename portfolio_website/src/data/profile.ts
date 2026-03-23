@@ -6,6 +6,8 @@ export const profile: Profile = {
   tagline: "dope",
   summary:
     "Hi, Im Max.",
+  about: 
+    "blah blah blah im max blah blah im max blah blah blah im max. hi",
   location: "Sydney, Australia",
   email: "maximomoeller@gmail.com",
   socials: [

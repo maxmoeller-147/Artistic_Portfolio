@@ -1,0 +1,41 @@
+/*PROJECT CARD*/
+
+.project-card {
+  border: 1px solid #dbe4f0;
+  border-radius: 16px;
+  padding: var(--space-lg);
+  background-color: #ffffff;
+}
+
+.project-card-title {
+  font-size: 1.25rem;
+  margin-bottom: var(--space-sm);
+  color: var(--color-text);
+}
+
+.project-card-description {
+  margin-bottom: var(--space-md);
+  color: var(--color-muted);
+}
+
+.project-card-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  margin-bottom: var(--space-lg);
+}
+
+.project-card-tag {
+  border: 1px solid #cbd5e1;
+  border-radius: 999px;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.9rem;
+  color: var(--color-text);
+}
+
+.project-card-actions {
+  display: flex;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}

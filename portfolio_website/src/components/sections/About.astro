@@ -1,0 +1,17 @@
+---
+import type { Profile } from "../../types/content";
+import SectionHeading from "../ui/SectionHeading.astro/";
+
+type Props = {
+  profile: Profile;
+};
+
+const { profile } = Astro.props;
+---
+
+<section id="about" class="about">
+
+  <SectionHeading label="About Me" title="A little bit about who I am"/>
+  
+  <p class="about-text">{profile.about}</p>
+</section>

@@ -1,0 +1,11 @@
+/*ABOUT SECTION*/
+
+.about {
+  padding: 4rem 0;
+}
+
+.about-text {
+  max-width: 750px;
+  color: var(--color-muted);
+  font-size: 1.05rem;
+}

@@ -1,0 +1,13 @@
+---
+type Props = {
+  label: string;
+  title: string;
+};
+
+const { label, title } = Astro.props;
+---
+
+<div class="section-heading">
+  <p class="section-label">{label}</p>
+  <h2 class="section-title">{title}</h2>
+</div>

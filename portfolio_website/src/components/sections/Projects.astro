@@ -1,0 +1,24 @@
+---
+import type { Project } from "../../types/content";
+import SectionHeading from "../ui/SectionHeading.astro";
+import ProjectCard from "../ui/ProjectCard.astro";
+
+type Props = {
+  projects: Project[];
+};
+
+const { projects } = Astro.props;
+---
+
+<section id="projects" class="projects">
+  <SectionHeading
+    label="Projects"
+    title="Things I've built and worked on"
+  />
+
+  <div class="projects-grid">
+    {projects.map((project) => (
+      <ProjectCard project={project} />
+    ))}
+  </div>
+</section>

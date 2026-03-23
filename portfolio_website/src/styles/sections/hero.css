@@ -28,3 +28,12 @@
   max-width: 700px;
   color: var(--color-muted);
 }
+
+/*BUTTON*/
+
+.hero-actions {
+  display: flex;
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+  flex-wrap: wrap;
+}

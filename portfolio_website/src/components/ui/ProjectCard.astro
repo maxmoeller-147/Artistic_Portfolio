@@ -1,0 +1,26 @@
+---
+import type { Project } from "../../types/content";
+import Button from "./Button.astro";
+
+type Props = {
+  project: Project;
+};
+
+const { project } = Astro.props;
+---
+
+<article class="project-card">
+  <h3 class="project-card-title">{project.title}</h3>
+  <p class="project-card-description">{project.description}</p>
+
+  <ul class="project-card-stack">
+    {project.stack.map((item) => (
+      <li class="project-card-tag">{item}</li>
+    ))}
+  </ul>
+
+  <div class="project-card-actions">
+    <Button href={project.liveUrl} label="Live Demo" variant="primary" />
+    <Button href={project.repoUrl} label="View Code" variant="secondary" />
+  </div>
+</article>
