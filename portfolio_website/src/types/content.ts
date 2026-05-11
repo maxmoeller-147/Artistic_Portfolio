@@ -1,3 +1,4 @@
+// Shared content models keep section props and data files in sync.
 export type Links = {
   label: string;
   href: string;

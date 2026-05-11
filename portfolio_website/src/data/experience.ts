@@ -1,5 +1,6 @@
 import type { ExperienceItem } from "../types/content";
 
+// Timeline entries rendered by the Experience section.
 export const experienceItems: ExperienceItem[] = [
   {
     role: "Frontend Developer",

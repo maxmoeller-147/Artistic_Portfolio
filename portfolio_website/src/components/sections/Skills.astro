@@ -9,7 +9,8 @@ type Props = {
 const { skillCategories } = Astro.props;
 ---
 
-<section id="skills" class="skills">
+<!-- Skills: grouped technical abilities from the skills data file. -->
+<section id="skills" class="section-block">
   <SectionHeading
     label="Skills"
     title="Tools and technologies I use"
@@ -17,12 +18,12 @@ const { skillCategories } = Astro.props;
 
   <div class="skills-grid">
     {skillCategories.map((category) => (
-      <article class="skills-card">
+      <article class="surface-card">
         <h3 class="skills-card-title">{category.title}</h3>
 
-        <ul class="skills-list">
+        <ul class="tag-list">
           {category.items.map((item) => (
-            <li class="skills-tag">{item}</li>
+            <li class="tag">{item}</li>
           ))}
         </ul>
       </article>

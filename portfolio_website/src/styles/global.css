@@ -1,32 +1,21 @@
+/* Base layer: reset, theme variables, document defaults, and typography. */
 @import "./base/reset.css";
 @import "./base/variables.css";
 @import "./base/base.css";
 @import "./base/typography.css";
 
+/* Shared UI patterns used across sections. */
+@import "./shared/sharedsections.css";
+
+/* Page sections. */
 @import "./sections/hero.css";
 @import "./sections/about.css";
 @import "./sections/skills.css";
 @import "./sections/experience.css";
 @import "./sections/contact.css";
+@import "./sections/projects.css";
 
-@import "./shared/sharedsections.css";
-
+/* Reusable UI components. */
 @import "./ui/Button.css";
 @import "./ui/Header.css";
-
-.section-heading {
-  margin-bottom: var(--space-lg);
-}
-
-
-@media (min-width: 768px) {
-  .projects-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .skills-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-
-}
+@import "./ui/ProjectCard.css";

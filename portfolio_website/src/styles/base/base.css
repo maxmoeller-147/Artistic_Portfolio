@@ -1,13 +1,28 @@
-/*BASE STYLES*/
-
-body {
-  font-family: system-ui, -apple-system, sans-serif;
-  background-color: var(--color-bg);
-  color: var(--color-text);
-  line-height: 1.6;
+/* Custom display font used across the portfolio. */
+@font-face {
+  font-family: "Alice in Wonderland";
+  src: url("../../assets/fonts/Alice_in_Wonderland_3.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
-/*Contenedor central*/
+/* Document-level colors and typography. */
+body {
+  font-family: var(--font-custom);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  line-height: 1.6;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Reusable centered wrapper for layout components like the header. */
+.container {
+  width: min(100% - (var(--space-md) * 2), var(--max-width));
+  margin: 0 auto;
+}
+
+/* Main content wrapper keeps sections aligned and readable. */
 main {
   max-width: var(--max-width);
   margin: 0 auto;

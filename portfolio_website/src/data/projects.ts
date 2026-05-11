@@ -1,8 +1,9 @@
 import type { Project } from "../types/content";
 
+// Project cards shown in the Projects section.
 export const projects: Project[] = [
   {
-    title: "Portfolio Website",
+    title: "Artistic Portfolio",
     description:
       "Un portfolio personal desarrollado como single-page application con foco en diseño limpio, escalabilidad y sistema de themes.",
     stack: ["Astro", "TypeScript", "Tailwind CSS"],

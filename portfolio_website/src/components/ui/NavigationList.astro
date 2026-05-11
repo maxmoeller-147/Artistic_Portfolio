@@ -1,0 +1,20 @@
+---
+import type { Links } from "../../types/content";
+
+type Props = {
+  links: Links[];
+  listClass: string;
+  linkClass: string;
+};
+
+// Reusa la misma data de navegacion con clases distintas para desktop/mobile.
+const { links, listClass, linkClass } = Astro.props;
+---
+
+<ul class={listClass}>
+  {links.map((link) => (
+    <li>
+      <a href={link.href} class={linkClass}>{link.label}</a>
+    </li>
+  ))}
+</ul>

@@ -1,10 +1,22 @@
-/*PROJECT CARD*/
+/* Project card-specific layout layered on top of .surface-card. */
 
 .project-card {
-  border: 1px solid #dbe4f0;
-  border-radius: 16px;
-  padding: var(--space-lg);
-  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  border-width: 2px;
+  box-shadow: none;
+  min-height: 260px;
+  opacity: 0.78;
+  transition: opacity 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+  cursor: pointer;
+}
+
+.project-card:hover,
+.project-card:active,
+.project-card:focus-within {
+  opacity: 1;
+  background-color: var(--color-surface-strong);
+  border-color: var(--color-primary);
 }
 
 .project-card-title {
@@ -19,23 +31,13 @@
 }
 
 .project-card-stack {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  list-style: none;
   margin-bottom: var(--space-lg);
 }
 
-.project-card-tag {
-  border: 1px solid #cbd5e1;
-  border-radius: 999px;
-  padding: 0.35rem 0.75rem;
-  font-size: 0.9rem;
-  color: var(--color-text);
+.project-card-actions {
+  margin-top: auto;
 }
 
-.project-card-actions {
-  display: flex;
-  gap: var(--space-md);
-  flex-wrap: wrap;
+.project-card-actions .button {
+  border-radius: var(--radius-sharp);
 }

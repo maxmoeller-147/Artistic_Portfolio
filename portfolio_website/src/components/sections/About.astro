@@ -1,6 +1,6 @@
 ---
 import type { Profile } from "../../types/content";
-import SectionHeading from "../ui/SectionHeading.astro/";
+import SectionHeading from "../ui/SectionHeading.astro";
 
 type Props = {
   profile: Profile;
@@ -9,9 +9,9 @@ type Props = {
 const { profile } = Astro.props;
 ---
 
-<section id="about" class="about">
+<!-- About: short personal summary powered by profile data. -->
+<section id="about" class="section-block">
+  <SectionHeading label="About Me" title="Hello World"/>
 
-  <SectionHeading label="About Me" title="A little bit about who I am"/>
-  
   <p class="about-text">{profile.about}</p>
 </section>

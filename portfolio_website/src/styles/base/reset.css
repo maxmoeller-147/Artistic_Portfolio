@@ -1,3 +1,4 @@
+/* Predictable sizing and clean default spacing across elements. */
 *,
 *::before,
 *::after {
@@ -6,6 +7,7 @@
   padding: 0;
 }
 
+/* Let full-height layouts inherit from the viewport. */
 html,
 body {
   height: 100%;

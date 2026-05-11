@@ -10,15 +10,21 @@ type Props = {
 const { projects } = Astro.props;
 ---
 
-<section id="projects" class="projects">
+<!-- Projects: horizontally scrollable list of reusable project cards. -->
+<section id="projects" class="section-block section-block--spacious">
   <SectionHeading
     label="Projects"
     title="Things I've built and worked on"
   />
 
-  <div class="projects-grid">
-    {projects.map((project) => (
-      <ProjectCard project={project} />
-    ))}
+  <!-- The list wrapper keeps project cards semantic and scroll-snapped. -->
+  <div class="projects-carousel">
+    <ul class="projects-grid" id="projectsCarousel" role="list">
+      {projects.map((project) => (
+        <li class="projects-item">
+          <ProjectCard project={project} />
+        </li>
+      ))}
+    </ul>
   </div>
 </section>

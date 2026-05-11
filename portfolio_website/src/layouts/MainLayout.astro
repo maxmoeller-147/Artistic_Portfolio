@@ -19,12 +19,28 @@ const {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Theme bootstrapping runs before CSS paints to avoid a theme flash. -->
+    <script is:inline>
+      (() => {
+        try {
+          const savedTheme = localStorage.getItem("theme");
+          const systemTheme = window.matchMedia("(prefers-color-scheme: light)").matches
+            ? "light"
+            : "dark";
+
+          document.documentElement.dataset.theme = savedTheme || systemTheme;
+        } catch {
+          document.documentElement.dataset.theme = "dark";
+        }
+      })();
+    </script>
     <title>{title}</title>
     <meta name="description" content={description} />
   </head>
   <body>
     <a id="top"></a>
     <Header />
+    <!-- Page sections are provided by each route inside the shared shell. -->
     <slot />
   </body>
 </html>

@@ -1,5 +1,6 @@
 import type { SkillCategory } from "../types/content";
 
+// Skill groups rendered as reusable tag lists in the Skills section.
 export const skillCategories: SkillCategory[] = [
   {
     title: "Frontend",

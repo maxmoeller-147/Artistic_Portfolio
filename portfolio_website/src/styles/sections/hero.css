@@ -1,8 +1,4 @@
-/*HERO SECTION*/
-
-.hero {
-  padding: 4rem 0;
-}
+/* Hero copy and primary actions. */
 
 .hero-role {
   color: var(--color-primary);
@@ -29,11 +25,6 @@
   color: var(--color-muted);
 }
 
-/*BUTTON*/
-
 .hero-actions {
-  display: flex;
-  gap: var(--space-md);
   margin-top: var(--space-lg);
-  flex-wrap: wrap;
 }

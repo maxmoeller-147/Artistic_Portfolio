@@ -1,4 +1,4 @@
-/*BUTTONS*/
+/* Shared link-as-button base. */
 
 .button {
   display: inline-flex;
@@ -11,15 +11,17 @@
   transition: 0.2s ease;
 }
 
+/* Filled CTA. */
 .button--primary {
   background-color: var(--color-primary);
-  color: white;
+  color: var(--color-on-primary);
 }
 
 .button--primary:hover {
   opacity: 0.9;
 }
 
+/* Outlined CTA. */
 .button--secondary {
   border: 1px solid var(--color-text);
   color: var(--color-text);
@@ -27,5 +29,5 @@
 }
 
 .button--secondary:hover {
-  background-color: rgba(15, 23, 42, 0.06);
+  background-color: var(--color-hover);
 }

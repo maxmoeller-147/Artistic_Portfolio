@@ -1,5 +1,6 @@
 import type { Profile } from "../types/content";
 
+// Main personal profile used by hero, about, contact, and header components.
 export const profile: Profile = {
   name: "Max Moeller",
   role: "Full Stack Web Developer",
@@ -7,7 +8,7 @@ export const profile: Profile = {
   summary:
     "Hi, Im Max.",
   about: 
-    "blah blah blah im max blah blah im max blah blah blah im max. hi",
+    "hola mundo como estas",
   location: "Sydney, Australia",
   email: "maximomoeller@gmail.com",
   socials: [

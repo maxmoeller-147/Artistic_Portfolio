@@ -3,11 +3,34 @@ type Props = {
   href: string;
   label: string;
   variant?: "primary" | "secondary";
+  className?: string;
+  ariaLabel?: string;
+  target?: string;
+  rel?: string;
 };
 
-const { href, label, variant = "primary" } = Astro.props;
+// Centraliza el markup de links con apariencia de boton.
+const {
+  href,
+  label,
+  variant = "primary",
+  className = "",
+  ariaLabel,
+  target,
+  rel,
+} = Astro.props;
+
+const buttonClass = ["button", `button--${variant}`, className]
+  .filter(Boolean)
+  .join(" ");
 ---
 
-<a href={href} class={`button button--${variant}`}>
+<a
+  href={href}
+  class={buttonClass}
+  aria-label={ariaLabel}
+  target={target}
+  rel={rel}
+>
   {label}
 </a>

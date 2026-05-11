@@ -9,15 +9,15 @@ type Props = {
 const { profile } = Astro.props;
 ---
 
-<section>
+<!-- Hero: first impression and primary calls to action. -->
+<section id="top" class="section-block">
   <p class="hero-role">{profile.role}</p>
   <h1 class="hero-title">{profile.name}</h1>
   <p class="hero-tagline">{profile.tagline}</p>
   <p class="hero-summary">{profile.summary}</p>
 
-  <div class="hero-actions">
+  <div class="actions-row hero-actions">
     <Button href="#projects" label="My Projects" variant="primary" />
     <Button href="#contact" label="Contact Me" variant="secondary" />
   </div>
 </section>
-

@@ -10,7 +10,8 @@ type Props = {
 const { profile } = Astro.props;
 ---
 
-<section id="contact" class="contact">
+<!-- Contact: direct email CTA plus social profile links. -->
+<section id="contact" class="section-block">
   <SectionHeading
     label="Contact"
     title="Let's build something together"
@@ -35,7 +36,7 @@ const { profile } = Astro.props;
     </p>
   </div>
 
-  <div class="contact-actions">
+  <div class="actions-row contact-actions">
     <Button
       href={`mailto:${profile.email}`}
       label="Send Email"
