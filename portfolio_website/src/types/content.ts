@@ -1,5 +1,5 @@
 // Shared content models keep section props and data files in sync.
-export type Links = {
+export type LinkItem = {
   label: string;
   href: string;
 };
@@ -12,14 +12,14 @@ export type Profile = {
   about: string;
   location: string;
   email: string;
-  socials: Links[];
+  socials: LinkItem[];
 };
 
 export type Project = {
   title: string;
   description: string;
   stack: string[];
-  liveUrl: string;
+  liveUrl?: string;
   repoUrl: string;
 };
 

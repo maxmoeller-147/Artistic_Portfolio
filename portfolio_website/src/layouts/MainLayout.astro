@@ -1,6 +1,7 @@
 ---
-import { siteConfig } from "../config/site";
-import Header from "../components/layouts/Header.astro";
+import Header from "@/components/layout/Header.astro";
+import SiteBackground from "@/components/layout/SiteBackground.astro";
+import { siteConfig } from "@/config/site";
 import "../styles/global.css";
 
 type Props = {
@@ -38,9 +39,8 @@ const {
     <meta name="description" content={description} />
   </head>
   <body>
-    <a id="top"></a>
+    <SiteBackground />
     <Header />
-    <!-- Page sections are provided by each route inside the shared shell. -->
     <slot />
   </body>
 </html>

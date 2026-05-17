@@ -1,11 +1,23 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "@fontsource-variable/geist";
+@import "./vendors/shadcn.css";
+
 /* Base layer: reset, theme variables, document defaults, and typography. */
 @import "./base/reset.css";
 @import "./base/variables.css";
 @import "./base/base.css";
 @import "./base/typography.css";
 
-/* Shared UI patterns used across sections. */
-@import "./shared/sharedsections.css";
+/* Shared component primitives. */
+@import "./components/actions.css";
+@import "./components/button.css";
+@import "./components/header.css";
+@import "./components/project-card.css";
+@import "./components/section.css";
+@import "./components/surface-card.css";
+@import "./components/tag-list.css";
 
 /* Page sections. */
 @import "./sections/hero.css";
@@ -14,8 +26,3 @@
 @import "./sections/experience.css";
 @import "./sections/contact.css";
 @import "./sections/projects.css";
-
-/* Reusable UI components. */
-@import "./ui/Button.css";
-@import "./ui/Header.css";
-@import "./ui/ProjectCard.css";

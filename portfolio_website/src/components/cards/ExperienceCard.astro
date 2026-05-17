@@ -1,0 +1,16 @@
+---
+import type { ExperienceItem } from "@/types/content";
+
+type Props = {
+  item: ExperienceItem;
+};
+
+const { item } = Astro.props;
+---
+
+<article class="experience-card">
+  <p class="experience-period">{item.period}</p>
+  <h3 class="experience-role">{item.role}</h3>
+  <p class="experience-company">{item.company}</p>
+  <p class="section-copy experience-description">{item.description}</p>
+</article>

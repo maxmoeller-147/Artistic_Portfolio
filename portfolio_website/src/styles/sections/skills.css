@@ -6,7 +6,7 @@
   grid-template-columns: 1fr;
 }
 
-.skills-card-title {
+.skill-card-title {
   font-size: 1.1rem;
   margin-bottom: var(--space-md);
   color: var(--color-text);

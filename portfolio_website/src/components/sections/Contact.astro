@@ -1,26 +1,20 @@
 ---
-import type { Profile } from "../../types/content";
-import SectionHeading from "../ui/SectionHeading.astro";
-import Button from "../ui/Button.astro";
+import type { Profile } from "@/types/content";
+import ActionRow from "@/components/common/ActionRow.astro";
+import Button from "@/components/common/Button.astro";
+import Section from "@/components/common/Section.astro";
+import { sectionContent } from "@/data";
 
 type Props = {
   profile: Profile;
 };
 
 const { profile } = Astro.props;
+const { contact } = sectionContent;
 ---
 
-<!-- Contact: direct email CTA plus social profile links. -->
-<section id="contact" class="section-block">
-  <SectionHeading
-    label="Contact"
-    title="Let's build something together"
-  />
-
-  <p class="contact-text">
-    I'm currently open to opportunities, collaborations, and new projects.
-    If you'd like to work together or just say hello, feel free to reach out.
-  </p>
+<Section id={contact.id} label={contact.label} title={contact.title}>
+  <p class="section-copy contact-text">{contact.intro}</p>
 
   <div class="contact-details">
     <p class="contact-item">
@@ -36,13 +30,13 @@ const { profile } = Astro.props;
     </p>
   </div>
 
-  <div class="actions-row contact-actions">
+  <ActionRow className="contact-actions">
     <Button
       href={`mailto:${profile.email}`}
       label="Send Email"
       variant="primary"
     />
-  </div>
+  </ActionRow>
 
   <ul class="social-links">
     {profile.socials.map((social) => (
@@ -53,4 +47,4 @@ const { profile } = Astro.props;
       </li>
     ))}
   </ul>
-</section>
+</Section>

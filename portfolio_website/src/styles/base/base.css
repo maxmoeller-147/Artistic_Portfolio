@@ -8,12 +8,44 @@
 }
 
 /* Document-level colors and typography. */
+html {
+  background-color: var(--color-bg);
+}
+
 body {
+  position: relative;
   font-family: var(--font-custom);
   color: var(--color-text);
   background-color: var(--color-bg);
   line-height: 1.6;
   transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image: var(--page-background-image);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: var(--page-background-opacity);
+}
+
+.site-noise-background {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.site-header,
+main {
+  position: relative;
+  z-index: 2;
 }
 
 /* Reusable centered wrapper for layout components like the header. */

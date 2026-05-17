@@ -1,0 +1,22 @@
+---
+type Props = {
+  items: string[];
+  className?: string;
+  itemClassName?: string;
+};
+
+const {
+  items,
+  className = "",
+  itemClassName = "",
+} = Astro.props;
+
+const listClass = ["tag-list", className].filter(Boolean).join(" ");
+const itemClass = ["tag", itemClassName].filter(Boolean).join(" ");
+---
+
+<ul class={listClass}>
+  {items.map((item) => (
+    <li class={itemClass}>{item}</li>
+  ))}
+</ul>

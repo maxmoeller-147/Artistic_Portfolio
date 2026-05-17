@@ -1,0 +1,12 @@
+---
+type Props = {
+  className?: string;
+};
+
+const { className = "" } = Astro.props;
+const rowClass = ["actions-row", className].filter(Boolean).join(" ");
+---
+
+<div class={rowClass}>
+  <slot />
+</div>

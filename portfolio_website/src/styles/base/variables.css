@@ -11,6 +11,8 @@
   --color-surface-strong: rgba(16, 16, 16, 0.95);
   --color-hover: rgba(216, 219, 222, 0.08);
   --color-scrollbar: rgba(148, 163, 184, 0.45);
+  --page-background-image: url("../../assets/images/stor_1080.jpg");
+  --page-background-opacity: 0.28;
   --font-custom: "Alice in Wonderland", system-ui, sans-serif;
 
   --max-width: 1100px;
@@ -20,7 +22,7 @@
   --space-lg: 24px;
   --space-xl: 48px;
 
-  --radius-md: 8px;
+  --radius-md: 0px;
   --radius-sharp: 0;
 }
 
@@ -36,4 +38,6 @@
   --color-surface-strong: #ffffff;
   --color-hover: rgba(71, 85, 105, 0.1);
   --color-scrollbar: rgba(71, 85, 105, 0.35);
+  --page-background-image: none;
+  --page-background-opacity: 0;
 }

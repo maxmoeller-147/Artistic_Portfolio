@@ -1,7 +1,6 @@
 /* About section body copy. */
 
 .about-text {
-  max-width: 750px;
-  color: var(--color-muted);
+  --copy-max-width: 750px;
   font-size: 1.05rem;
 }

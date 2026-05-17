@@ -29,6 +29,5 @@
 }
 
 .experience-description {
-  color: var(--color-muted);
-  max-width: 720px;
+  --copy-max-width: 720px;
 }

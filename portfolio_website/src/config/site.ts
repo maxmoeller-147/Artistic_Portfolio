@@ -1,5 +1,5 @@
 export const siteConfig = {
   title: "Max Moeller's Portfolio",
   description:
-    "Hi, Welcome to my portfolio",
+    "Portfolio of Max Moeller, a junior full-stack software engineer in Sydney building React, Node.js, Python, Flask, and SQL web applications.",
 };

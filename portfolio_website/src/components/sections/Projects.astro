@@ -1,23 +1,18 @@
 ---
-import type { Project } from "../../types/content";
-import SectionHeading from "../ui/SectionHeading.astro";
-import ProjectCard from "../ui/ProjectCard.astro";
+import type { Project } from "@/types/content";
+import ProjectCard from "@/components/cards/ProjectCard.astro";
+import Section from "@/components/common/Section.astro";
+import { sectionContent } from "@/data";
 
 type Props = {
   projects: Project[];
 };
 
 const { projects } = Astro.props;
+const { projects: copy } = sectionContent;
 ---
 
-<!-- Projects: horizontally scrollable list of reusable project cards. -->
-<section id="projects" class="section-block section-block--spacious">
-  <SectionHeading
-    label="Projects"
-    title="Things I've built and worked on"
-  />
-
-  <!-- The list wrapper keeps project cards semantic and scroll-snapped. -->
+<Section id={copy.id} label={copy.label} title={copy.title} spacious>
   <div class="projects-carousel">
     <ul class="projects-grid" id="projectsCarousel" role="list">
       {projects.map((project) => (
@@ -27,4 +22,4 @@ const { projects } = Astro.props;
       ))}
     </ul>
   </div>
-</section>
+</Section>

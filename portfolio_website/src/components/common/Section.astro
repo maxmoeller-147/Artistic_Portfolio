@@ -1,0 +1,32 @@
+---
+import SectionHeading from "@/components/common/SectionHeading.astro";
+
+type Props = {
+  id: string;
+  label?: string;
+  title?: string;
+  spacious?: boolean;
+  className?: string;
+};
+
+const {
+  id,
+  label,
+  title,
+  spacious = false,
+  className = "",
+} = Astro.props;
+
+const sectionClass = [
+  "section-block",
+  spacious && "section-block--spacious",
+  className,
+]
+  .filter(Boolean)
+  .join(" ");
+---
+
+<section id={id} class={sectionClass}>
+  {label && title && <SectionHeading label={label} title={title} />}
+  <slot />
+</section>

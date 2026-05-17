@@ -1,0 +1,13 @@
+---
+import { NoiseTexture } from "@/components/ui/noise-texture";
+---
+
+<div class="site-noise-background" aria-hidden="true">
+  <NoiseTexture
+    client:load
+    opacity={0.18}
+    speed={6}
+    grain="fine"
+    blend="soft-light"
+  />
+</div>

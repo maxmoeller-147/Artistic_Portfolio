@@ -1,23 +1,34 @@
 ---
-import type { Profile } from "../../types/content";
-import Button from "../ui/Button.astro";
+import type { Profile } from "@/types/content";
+import ActionRow from "@/components/common/ActionRow.astro";
+import Button from "@/components/common/Button.astro";
+import Section from "@/components/common/Section.astro";
+import { sectionContent } from "@/data";
 
 type Props = {
   profile: Profile;
 };
 
 const { profile } = Astro.props;
+const { hero } = sectionContent;
 ---
 
-<!-- Hero: first impression and primary calls to action. -->
-<section id="top" class="section-block">
+<Section id={hero.id}>
   <p class="hero-role">{profile.role}</p>
   <h1 class="hero-title">{profile.name}</h1>
   <p class="hero-tagline">{profile.tagline}</p>
-  <p class="hero-summary">{profile.summary}</p>
+  <p class="section-copy hero-summary">{profile.summary}</p>
 
-  <div class="actions-row hero-actions">
-    <Button href="#projects" label="My Projects" variant="primary" />
-    <Button href="#contact" label="Contact Me" variant="secondary" />
-  </div>
-</section>
+  <ActionRow className="hero-actions">
+    <Button
+      href={hero.actions.projects.href}
+      label={hero.actions.projects.label}
+      variant="primary"
+    />
+    <Button
+      href={hero.actions.contact.href}
+      label={hero.actions.contact.label}
+      variant="secondary"
+    />
+  </ActionRow>
+</Section>

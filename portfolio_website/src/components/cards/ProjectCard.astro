@@ -1,0 +1,26 @@
+---
+import type { Project } from "@/types/content";
+import ActionRow from "@/components/common/ActionRow.astro";
+import Button from "@/components/common/Button.astro";
+import TagList from "@/components/common/TagList.astro";
+
+type Props = {
+  project: Project;
+};
+
+const { project } = Astro.props;
+---
+
+<article class="surface-card project-card">
+  <h3 class="project-card-title">{project.title}</h3>
+  <p class="project-card-description">{project.description}</p>
+
+  <TagList items={project.stack} className="project-card-stack" />
+
+  <ActionRow className="project-card-actions">
+    {project.liveUrl && (
+      <Button href={project.liveUrl} label="Live Demo" variant="primary" />
+    )}
+    <Button href={project.repoUrl} label="View Code" variant="secondary" />
+  </ActionRow>
+</article>

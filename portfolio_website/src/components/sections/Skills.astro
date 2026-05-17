@@ -1,32 +1,21 @@
 ---
-import type { SkillCategory } from "../../types/content";
-import SectionHeading from "../ui/SectionHeading.astro";
+import type { SkillCategory } from "@/types/content";
+import SkillCard from "@/components/cards/SkillCard.astro";
+import Section from "@/components/common/Section.astro";
+import { sectionContent } from "@/data";
 
 type Props = {
   skillCategories: SkillCategory[];
 };
 
 const { skillCategories } = Astro.props;
+const { skills } = sectionContent;
 ---
 
-<!-- Skills: grouped technical abilities from the skills data file. -->
-<section id="skills" class="section-block">
-  <SectionHeading
-    label="Skills"
-    title="Tools and technologies I use"
-  />
-
+<Section id={skills.id} label={skills.label} title={skills.title}>
   <div class="skills-grid">
     {skillCategories.map((category) => (
-      <article class="surface-card">
-        <h3 class="skills-card-title">{category.title}</h3>
-
-        <ul class="tag-list">
-          {category.items.map((item) => (
-            <li class="tag">{item}</li>
-          ))}
-        </ul>
-      </article>
+      <SkillCard category={category} />
     ))}
   </div>
-</section>
+</Section>

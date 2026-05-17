@@ -1,13 +1,12 @@
 ---
-import type { Links } from "../../types/content";
+import type { LinkItem } from "@/types/content";
 
 type Props = {
-  links: Links[];
+  links: LinkItem[];
   listClass: string;
   linkClass: string;
 };
 
-// Reusa la misma data de navegacion con clases distintas para desktop/mobile.
 const { links, listClass, linkClass } = Astro.props;
 ---
 
