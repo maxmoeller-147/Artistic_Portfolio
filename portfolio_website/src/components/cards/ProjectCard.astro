@@ -11,13 +11,13 @@ type Props = {
 const { project } = Astro.props;
 ---
 
-<article class="surface-card project-card">
-  <h3 class="project-card-title">{project.title}</h3>
-  <p class="project-card-description">{project.description}</p>
+<article class="flex min-h-[260px] cursor-pointer flex-col rounded-none border-2 border-portfolio-border bg-portfolio-surface p-6 opacity-[0.78] shadow-none transition-[opacity,background-color,border-color] duration-300 hover:border-portfolio-primary hover:bg-portfolio-surface-strong hover:opacity-100 active:border-portfolio-primary active:bg-portfolio-surface-strong active:opacity-100 focus-within:border-portfolio-primary focus-within:bg-portfolio-surface-strong focus-within:opacity-100">
+  <h3 class="mb-2 text-xl text-portfolio-text">{project.title}</h3>
+  <p class="mb-4 text-portfolio-muted">{project.description}</p>
 
-  <TagList items={project.stack} className="project-card-stack" />
+  <TagList items={project.stack} className="mb-6" />
 
-  <ActionRow className="project-card-actions">
+  <ActionRow className="mt-auto">
     {project.liveUrl && (
       <Button href={project.liveUrl} label="Live Demo" variant="primary" />
     )}

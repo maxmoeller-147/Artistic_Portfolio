@@ -1,45 +1,62 @@
 ---
-import Button from "@/components/common/Button.astro";
 import NavigationList from "@/components/common/NavigationList.astro";
 import MobileMenuButton from "@/components/layout/MobileMenuButton.astro";
 import ThemeToggle from "@/components/layout/ThemeToggle.astro";
 import { navLinks, profile } from "@/data";
+
+const headerContainerClass =
+  "mx-auto flex min-h-[4.5rem] w-[calc(100%_-_2rem)] max-w-[var(--max-width)] items-center justify-between gap-4";
+const navListClass = "m-0 flex list-none items-center gap-[0.35rem] p-0";
+const navLinkClass =
+  "inline-flex h-10 items-center justify-center rounded-none px-[0.9rem] font-medium text-portfolio-muted no-underline transition-[background-color,color] duration-200 hover:bg-portfolio-surface hover:text-portfolio-text";
+const mobileNavListClass = "m-0 flex list-none flex-col p-0";
+const mobileNavLinkClass =
+  "block border-b border-portfolio-border px-6 py-4 font-medium text-portfolio-text no-underline transition-colors duration-200 hover:bg-portfolio-surface";
+const contactClass =
+  "inline-flex h-10 min-w-[6.5rem] items-center justify-center rounded-none border border-portfolio-border bg-portfolio-surface px-4 font-semibold text-portfolio-text no-underline transition-[border-color,background-color,color,transform] duration-200 hover:-translate-y-px hover:border-portfolio-primary hover:bg-portfolio-surface-strong hover:text-portfolio-primary max-[768px]:hidden";
 ---
 
-<header class="site-header">
-  <div class="container header-inner">
-    <a href="#top" class="brand" aria-label="Go to top of page">
-      <span class="brand-text">{profile.name}</span>
+<header class="sticky top-0 z-[1000] border-b border-portfolio-border bg-[color-mix(in_srgb,var(--color-bg)_82%,transparent)] backdrop-blur-[14px]">
+  <div class={headerContainerClass}>
+    <a
+      href="#top"
+      class="inline-flex shrink-0 items-center font-bold text-portfolio-text no-underline"
+      aria-label="Go to top of page"
+    >
+      <span class="leading-none">{profile.name}</span>
     </a>
 
-    <nav class="desktop-nav" aria-label="Main navigation">
+    <nav class="hidden min-[769px]:block" aria-label="Main navigation">
       <NavigationList
         links={navLinks}
-        listClass="nav-list"
-        linkClass="nav-link"
+        listClass={navListClass}
+        linkClass={navLinkClass}
       />
     </nav>
 
-    <div class="header-actions">
+    <div class="flex items-center gap-[0.65rem]">
       <ThemeToggle />
 
-      <Button
+      <a
         href={`mailto:${profile.email}`}
-        label="Contact"
-        variant="secondary"
-        className="contact-button"
-        ariaLabel="Send email"
-      />
+        class={contactClass}
+        aria-label="Send email"
+      >
+        Contact
+      </a>
 
       <MobileMenuButton />
     </div>
   </div>
 
-  <nav class="mobile-nav" aria-hidden="true">
+  <nav
+    class="mobile-nav invisible absolute inset-x-0 top-full -translate-y-full border-b border-portfolio-border bg-portfolio-bg opacity-0 transition-[transform,opacity,visibility] duration-300 [&.open]:visible [&.open]:translate-y-0 [&.open]:opacity-100"
+    aria-hidden="true"
+  >
     <NavigationList
       links={navLinks}
-      listClass="mobile-nav-list"
-      linkClass="mobile-nav-link"
+      listClass={mobileNavListClass}
+      linkClass={`mobile-nav-link ${mobileNavLinkClass}`}
     />
   </nav>
 </header>
@@ -65,6 +82,8 @@ import { navLinks, profile } from "@/data";
   });
 
   const themeToggle = document.querySelector('.theme-toggle');
+  const sunIcon = themeToggle?.querySelector('.sun-icon');
+  const moonIcon = themeToggle?.querySelector('.moon-icon');
   const root = document.documentElement;
 
   const setTheme = (theme) => {
@@ -76,6 +95,10 @@ import { navLinks, profile } from "@/data";
       nextTheme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'
     );
     themeToggle?.setAttribute('aria-pressed', String(nextTheme === 'light'));
+    sunIcon?.classList.toggle('opacity-0', nextTheme === 'light');
+    sunIcon?.classList.toggle('opacity-100', nextTheme !== 'light');
+    moonIcon?.classList.toggle('opacity-0', nextTheme !== 'light');
+    moonIcon?.classList.toggle('opacity-100', nextTheme === 'light');
 
     try {
       localStorage.setItem('theme', nextTheme);

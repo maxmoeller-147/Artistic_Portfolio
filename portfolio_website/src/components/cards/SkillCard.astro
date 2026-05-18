@@ -9,7 +9,7 @@ type Props = {
 const { category } = Astro.props;
 ---
 
-<article class="surface-card skill-card">
-  <h3 class="skill-card-title">{category.title}</h3>
+<article class="rounded-none border border-portfolio-border bg-portfolio-surface p-6">
+  <h3 class="mb-4 text-[1.1rem] text-portfolio-text">{category.title}</h3>
   <TagList items={category.items} />
 </article>

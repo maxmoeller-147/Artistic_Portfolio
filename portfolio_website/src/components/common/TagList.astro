@@ -11,8 +11,15 @@ const {
   itemClassName = "",
 } = Astro.props;
 
-const listClass = ["tag-list", className].filter(Boolean).join(" ");
-const itemClass = ["tag", itemClassName].filter(Boolean).join(" ");
+const listClass = ["m-0 flex list-none flex-wrap gap-2 p-0", className]
+  .filter(Boolean)
+  .join(" ");
+const itemClass = [
+  "rounded-none border border-portfolio-border px-3 py-[0.35rem] text-[0.9rem] text-portfolio-text",
+  itemClassName,
+]
+  .filter(Boolean)
+  .join(" ");
 ---
 
 <ul class={listClass}>

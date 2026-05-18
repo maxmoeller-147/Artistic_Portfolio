@@ -13,7 +13,7 @@ const { skills } = sectionContent;
 ---
 
 <Section id={skills.id} label={skills.label} title={skills.title}>
-  <div class="skills-grid">
+  <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
     {skillCategories.map((category) => (
       <SkillCard category={category} />
     ))}

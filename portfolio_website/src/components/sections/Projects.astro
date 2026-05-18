@@ -13,10 +13,14 @@ const { projects: copy } = sectionContent;
 ---
 
 <Section id={copy.id} label={copy.label} title={copy.title} spacious>
-  <div class="projects-carousel">
-    <ul class="projects-grid" id="projectsCarousel" role="list">
+  <div class="flex items-center gap-2 overflow-hidden min-[769px]:gap-4">
+    <ul
+      class="m-0 flex list-none gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-4 pl-2 pr-2 [-webkit-overflow-scrolling:touch] [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-portfolio-scrollbar [&::-webkit-scrollbar]:h-2.5"
+      id="projectsCarousel"
+      role="list"
+    >
       {projects.map((project) => (
-        <li class="projects-item">
+        <li class="snap-start flex-[0_0_min(360px,90%)] [&>article]:h-full">
           <ProjectCard project={project} />
         </li>
       ))}

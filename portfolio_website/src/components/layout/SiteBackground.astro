@@ -2,7 +2,7 @@
 import { NoiseTexture } from "@/components/ui/noise-texture";
 ---
 
-<div class="site-noise-background" aria-hidden="true">
+<div class="pointer-events-none fixed inset-0 z-[1] overflow-hidden" aria-hidden="true">
   <NoiseTexture
     client:load
     opacity={0.18}

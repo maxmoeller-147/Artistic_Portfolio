@@ -7,8 +7,7 @@ type Props = {
 const { label, title } = Astro.props;
 ---
 
-<!-- Shared heading pattern for every portfolio section. -->
-<div class="section-heading">
-  <p class="section-label">{label}</p>
-  <h2 class="section-title">{title}</h2>
+<div class="mb-6">
+  <p class="mb-2 font-semibold text-portfolio-primary">{label}</p>
+  <h2 class="mb-4 text-[2rem] text-portfolio-text">{title}</h2>
 </div>

@@ -13,7 +13,7 @@ const { experience } = sectionContent;
 ---
 
 <Section id={experience.id} label={experience.label} title={experience.title}>
-  <div class="experience-list">
+  <div class="grid gap-6">
     {experienceItems.map((item) => (
       <ExperienceCard item={item} />
     ))}

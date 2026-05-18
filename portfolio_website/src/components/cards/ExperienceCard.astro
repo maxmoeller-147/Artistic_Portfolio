@@ -8,9 +8,9 @@ type Props = {
 const { item } = Astro.props;
 ---
 
-<article class="experience-card">
-  <p class="experience-period">{item.period}</p>
-  <h3 class="experience-role">{item.role}</h3>
-  <p class="experience-company">{item.company}</p>
-  <p class="section-copy experience-description">{item.description}</p>
+<article class="border-l-[3px] border-portfolio-primary pl-6">
+  <p class="mb-2 font-semibold text-portfolio-primary">{item.period}</p>
+  <h3 class="mb-[0.35rem] text-[1.2rem] text-portfolio-text">{item.role}</h3>
+  <p class="mb-2 font-medium text-portfolio-text">{item.company}</p>
+  <p class="mb-4 max-w-[720px] text-portfolio-muted">{item.description}</p>
 </article>

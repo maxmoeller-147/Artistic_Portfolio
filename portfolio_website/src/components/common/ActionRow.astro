@@ -4,7 +4,7 @@ type Props = {
 };
 
 const { className = "" } = Astro.props;
-const rowClass = ["actions-row", className].filter(Boolean).join(" ");
+const rowClass = ["flex flex-wrap gap-4", className].filter(Boolean).join(" ");
 ---
 
 <div class={rowClass}>

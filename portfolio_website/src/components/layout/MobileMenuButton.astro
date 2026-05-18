@@ -1,9 +1,12 @@
 ---
 import MenuIcon from "@/components/icons/MenuIcon.astro";
+
+const iconButtonClass =
+  "hamburger-button inline-grid h-10 w-10 place-items-center rounded-none border border-transparent bg-transparent text-portfolio-muted no-underline transition-[background-color,color,border-color] duration-200 hover:border-portfolio-border hover:bg-portfolio-surface hover:text-portfolio-text min-[769px]:hidden";
 ---
 
 <button
-  class="hamburger-button icon-button"
+  class={iconButtonClass}
   aria-label="Toggle navigation menu"
   aria-expanded="false"
 >

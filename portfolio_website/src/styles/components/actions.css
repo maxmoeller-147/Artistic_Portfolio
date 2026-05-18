@@ -1,6 +1,0 @@
-/* Shared row for call-to-action groups. */
-.actions-row {
-  display: flex;
-  gap: var(--space-md);
-  flex-wrap: wrap;
-}

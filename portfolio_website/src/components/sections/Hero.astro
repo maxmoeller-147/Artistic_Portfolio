@@ -14,12 +14,14 @@ const { hero } = sectionContent;
 ---
 
 <Section id={hero.id}>
-  <p class="hero-role">{profile.role}</p>
-  <h1 class="hero-title">{profile.name}</h1>
-  <p class="hero-tagline">{profile.tagline}</p>
-  <p class="section-copy hero-summary">{profile.summary}</p>
+  <p class="mb-2 font-semibold text-portfolio-primary">{profile.role}</p>
+  <h1 class="mb-4 text-[2.5rem] leading-[1.1] text-portfolio-text sm:text-6xl lg:text-[4.5rem]">
+    {profile.name}
+  </h1>
+  <p class="mb-4 max-w-[700px] text-xl text-portfolio-text">{profile.tagline}</p>
+  <p class="mb-4 max-w-[700px] text-portfolio-muted">{profile.summary}</p>
 
-  <ActionRow className="hero-actions">
+  <ActionRow className="mt-6">
     <Button
       href={hero.actions.projects.href}
       label={hero.actions.projects.label}

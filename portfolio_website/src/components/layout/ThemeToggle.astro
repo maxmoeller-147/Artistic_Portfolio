@@ -1,13 +1,18 @@
 ---
 import MoonIcon from "@/components/icons/MoonIcon.astro";
 import SunIcon from "@/components/icons/SunIcon.astro";
+
+const iconButtonClass =
+  "theme-toggle relative inline-grid h-10 w-10 place-items-center rounded-none border border-transparent bg-transparent text-portfolio-muted no-underline transition-[background-color,color,border-color] duration-200 hover:border-portfolio-border hover:bg-portfolio-surface hover:text-portfolio-text";
+const iconClass =
+  "absolute left-1/2 top-1/2 h-[1.1rem] w-[1.1rem] -translate-x-1/2 -translate-y-1/2 transition-opacity duration-300";
 ---
 
 <button
-  class="theme-toggle icon-button"
+  class={iconButtonClass}
   aria-label="Switch theme"
   aria-pressed="false"
 >
-  <SunIcon className="icon sun-icon" />
-  <MoonIcon className="icon moon-icon" />
+  <SunIcon className={`${iconClass} sun-icon opacity-100`} />
+  <MoonIcon className={`${iconClass} moon-icon opacity-0`} />
 </button>

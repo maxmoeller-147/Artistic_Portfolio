@@ -18,8 +18,7 @@ const {
 } = Astro.props;
 
 const sectionClass = [
-  "section-block",
-  spacious && "section-block--spacious",
+  spacious ? "py-32" : "py-16",
   className,
 ]
   .filter(Boolean)

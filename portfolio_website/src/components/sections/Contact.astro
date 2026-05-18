@@ -14,23 +14,23 @@ const { contact } = sectionContent;
 ---
 
 <Section id={contact.id} label={contact.label} title={contact.title}>
-  <p class="section-copy contact-text">{contact.intro}</p>
+  <p class="mb-6 max-w-[700px] text-portfolio-muted">{contact.intro}</p>
 
-  <div class="contact-details">
-    <p class="contact-item">
-      <span class="contact-label">Email:</span>
-      <a href={`mailto:${profile.email}`} class="contact-link">
+  <div class="mb-6 grid gap-2">
+    <p class="mb-4 text-portfolio-text">
+      <span class="mr-[0.35rem] font-semibold">Email:</span>
+      <a href={`mailto:${profile.email}`} class="text-portfolio-primary no-underline hover:underline">
         {profile.email}
       </a>
     </p>
 
-    <p class="contact-item">
-      <span class="contact-label">Location:</span>
+    <p class="mb-4 text-portfolio-text">
+      <span class="mr-[0.35rem] font-semibold">Location:</span>
       {profile.location}
     </p>
   </div>
 
-  <ActionRow className="contact-actions">
+  <ActionRow className="mb-6">
     <Button
       href={`mailto:${profile.email}`}
       label="Send Email"
@@ -38,10 +38,15 @@ const { contact } = sectionContent;
     />
   </ActionRow>
 
-  <ul class="social-links">
+  <ul class="m-0 flex list-none flex-wrap gap-4 p-0">
     {profile.socials.map((social) => (
       <li>
-        <a href={social.href} class="social-link" target="_blank" rel="noreferrer">
+        <a
+          href={social.href}
+          class="font-medium text-portfolio-text no-underline hover:text-portfolio-primary"
+          target="_blank"
+          rel="noreferrer"
+        >
           {social.label}
         </a>
       </li>

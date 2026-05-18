@@ -19,7 +19,15 @@ const {
   rel,
 } = Astro.props;
 
-const buttonClass = ["button", `button--${variant}`, className]
+const baseClass =
+  "inline-flex items-center justify-center rounded-none px-5 py-[0.85rem] font-semibold no-underline transition duration-200";
+
+const variantClass = {
+  primary: "bg-portfolio-primary text-portfolio-on-primary hover:opacity-90",
+  secondary: "border border-portfolio-text bg-transparent text-portfolio-text hover:bg-portfolio-hover",
+}[variant];
+
+const buttonClass = [baseClass, variantClass, className]
   .filter(Boolean)
   .join(" ");
 ---

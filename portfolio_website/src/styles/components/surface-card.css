@@ -1,7 +1,0 @@
-/* Reusable card shell for compact content blocks. */
-.surface-card {
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-sharp);
-  padding: var(--space-lg);
-  background-color: var(--color-surface);
-}
